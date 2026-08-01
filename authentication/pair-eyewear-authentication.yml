@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source: https://paireyewear.com/.well-known/openid-configuration
+docs: https://paireyewear.com/agents.md
+summary:
+  types: [openIdConnect, oauth2]
+  oauth2_flows: [authorizationCode, refreshToken]
+  notes: >-
+    Customer-facing authentication is provided by Shopify Customer Accounts (OpenID Connect).
+    Agent read/browse of the storefront and UCP discovery require no authentication; UCP/MCP
+    checkout requires contemporaneous buyer approval rather than an API credential.
+schemes:
+- name: shopify-customer-accounts-oidc
+  type: openIdConnect
+  openIdConnectUrl: https://paireyewear.com/.well-known/openid-configuration
+  issuer: https://shopify.com/authentication/11479910
+  authorization_endpoint: https://shopify.com/authentication/11479910/oauth/authorize
+  token_endpoint: https://shopify.com/authentication/11479910/oauth/token
+  end_session_endpoint: https://shopify.com/authentication/11479910/logout
+  jwks_uri: https://shopify.com/authentication/11479910/.well-known/jwks.json
+  grant_types: [authorization_code, refresh_token, 'urn:ietf:params:oauth:grant-type:jwt-bearer']
+  code_challenge_methods: [S256]
+  token_endpoint_auth_methods: [client_secret_basic]
+  id_token_signing_alg: [RS256]
+  scopes: [openid, email, 'customer-account-api:full', 'customer-account-mcp-api:full']
+  sources: [well-known/pair-eyewear-openid-configuration.json]

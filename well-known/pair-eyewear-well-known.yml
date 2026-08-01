@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of https://paireyewear.com/.well-known/*
+host: https://paireyewear.com
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: pair-eyewear-openid-configuration.json
+  note: Shopify Customer Accounts OpenID Connect discovery (issuer https://shopify.com/authentication/11479910)
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: pair-eyewear-oauth-authorization-server.json
+  note: RFC 8414 authorization-server metadata (identical to OIDC discovery)
+- path: /.well-known/ucp
+  status: 200
+  file: pair-eyewear-ucp.json
+  note: Universal Commerce Protocol (ucp.dev) merchant profile; advertises an MCP transport endpoint for agent commerce
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

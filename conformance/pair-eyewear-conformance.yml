@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: searched
+source: https://paireyewear.com/.well-known/ (openid-configuration, oauth-authorization-server, ucp)
+standards:
+- id: oauth2
+  conforms: true
+  evidence: RFC 8414 authorization-server metadata served at /.well-known/oauth-authorization-server (authorizationCode + refresh_token grants)
+- id: oidc
+  conforms: true
+  evidence: OpenID Connect discovery served at /.well-known/openid-configuration (RS256 id_token, S256 PKCE)
+- id: mcp
+  conforms: true
+  evidence: UCP profile advertises an MCP transport endpoint at /api/ucp/mcp with an OpenRPC schema
+- id: ucp
+  conforms: true
+  evidence: /.well-known/ucp returns a Universal Commerce Protocol (ucp.dev) merchant profile, versions 2026-04-08 and 2026-01-23
+- id: rfc9457-problem-details
+  conforms: false
+- id: json-api
+  conforms: false

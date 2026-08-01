@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://paireyewear.com/agents.md
+scope: Agent commerce over the Universal Commerce Protocol (UCP) MCP endpoint
+authentication:
+  read: none required for browsing / UCP discovery
+  checkout: contemporaneous buyer approval required at moment of payment (no agent-held card)
+discovery:
+  well_known: GET https://paireyewear.com/.well-known/ucp
+  mcp_endpoint: POST https://paireyewear.com/api/ucp/mcp (Content-Type application/json)
+  tool_discovery: MCP tools/list method returns available tools and their schemas
+rate_limiting:
+  signal: HTTP 429
+  guidance: MCP endpoint is rate-limited per IP; back off on 429 responses
+request_context:
+  fields: [context.address_country, context.currency]
+  note: pass buyer context for accurate pricing and availability
+versioning:
+  scheme: dated
+  current: '2026-04-08'
+  supported: ['2026-04-08', '2026-01-23']
+idempotency:
+  supported: false
+  note: no idempotency-key contract documented for the storefront UCP surface
+cross_links:
+  authentication: authentication/pair-eyewear-authentication.yml
+  mcp: mcp/pair-eyewear-mcp.yml
+  well_known: well-known/pair-eyewear-well-known.yml

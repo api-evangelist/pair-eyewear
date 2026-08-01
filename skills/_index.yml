@@ -1,0 +1,13 @@
+generated: '2026-07-20'
+method: searched
+source: https://paireyewear.com/agents.md
+skills:
+- file: pair-eyewear-agents.md
+  name: Pair Eyewear agent commerce instructions
+  description: >-
+    Provider-published agent operating instructions (agents.md) for shopping the Pair Eyewear
+    store via the Universal Commerce Protocol MCP endpoint: discover, search_catalog, create_cart,
+    create_checkout, update_checkout, complete_checkout — with the buyer-approval invariant on payment.
+  api: mcp/pair-eyewear-mcp.yml
+  operations: [search_catalog, create_cart, create_checkout, update_checkout, complete_checkout]
+  published: true

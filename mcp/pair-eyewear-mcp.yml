@@ -1,0 +1,44 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://paireyewear.com/.well-known/ucp
+docs: https://paireyewear.com/agents.md
+spec: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
+server:
+  name: pair-eyewear-ucp
+  protocol: Universal Commerce Protocol (ucp.dev)
+  transport: http
+  url: https://pair-eyewear.myshopify.com/api/ucp/mcp
+  alias_url: https://paireyewear.com/api/ucp/mcp
+  versions: ['2026-04-08', '2026-01-23']
+  auth: none for read/discovery; checkout requires contemporaneous buyer approval
+  notes: >-
+    Shopify-hosted, store-scoped UCP shopping service exposed over MCP. Agents call the
+    MCP `tools/list` method against the endpoint to discover live tool schemas. Rate-limited
+    per IP (back off on 429). Payment must be buyer-approved; Shop skill (https://shop.app/SKILL.md)
+    is the recommended path for buyer-approved Shop Pay checkout.
+capabilities:
+- dev.ucp.shopping.catalog.search
+- dev.ucp.shopping.catalog.lookup
+- dev.ucp.shopping.cart
+- dev.ucp.shopping.checkout
+- dev.ucp.shopping.fulfillment
+- dev.ucp.shopping.discount
+- dev.ucp.shopping.order
+- dev.shopify.catalog
+tools:
+- name: search_catalog
+  description: Find products matching the buyer's intent
+  source: https://paireyewear.com/agents.md
+- name: create_cart
+  description: Add desired items to a cart
+  source: https://paireyewear.com/agents.md
+- name: create_checkout
+  description: Start the purchase flow
+  source: https://paireyewear.com/agents.md
+- name: update_checkout
+  description: Set shipping address and method
+  source: https://paireyewear.com/agents.md
+- name: complete_checkout
+  description: Finalize the purchase (buyer must approve payment)
+  source: https://paireyewear.com/agents.md
