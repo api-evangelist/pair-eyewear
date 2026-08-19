@@ -10,13 +10,14 @@ server:
   transport: http
   url: https://pair-eyewear.myshopify.com/api/ucp/mcp
   alias_url: https://paireyewear.com/api/ucp/mcp
-  versions: ['2026-04-08', '2026-01-23']
+  versions:
+  - '2026-04-08'
+  - '2026-01-23'
   auth: none for read/discovery; checkout requires contemporaneous buyer approval
-  notes: >-
-    Shopify-hosted, store-scoped UCP shopping service exposed over MCP. Agents call the
-    MCP `tools/list` method against the endpoint to discover live tool schemas. Rate-limited
-    per IP (back off on 429). Payment must be buyer-approved; Shop skill (https://shop.app/SKILL.md)
-    is the recommended path for buyer-approved Shop Pay checkout.
+  notes: Shopify-hosted, store-scoped UCP shopping service exposed over MCP. Agents call the MCP `tools/list`
+    method against the endpoint to discover live tool schemas. Rate-limited per IP (back off on 429).
+    Payment must be buyer-approved; Shop skill (https://shop.app/SKILL.md) is the recommended path for
+    buyer-approved Shop Pay checkout.
 capabilities:
 - dev.ucp.shopping.catalog.search
 - dev.ucp.shopping.catalog.lookup
@@ -42,3 +43,11 @@ tools:
 - name: complete_checkout
   description: Finalize the purchase (buyer must approve payment)
   source: https://paireyewear.com/agents.md
+deployment:
+  mode: remote
+  endpoint: https://pair-eyewear.myshopify.com/api/ucp/mcp
+  verified: probed
+  probe: live
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
