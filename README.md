@@ -64,6 +64,102 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Pair Eyewear is a company surfaced as a portfolio company of nea and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.
+Pair Eyewear is a direct-to-consumer eyewear brand known for its modular, magnetic Top Frames system: customers pick a base optical or sunglasses frame and swap interchangeable magnetic top frames in hundreds of patterns and licensed collaborations (Disney, Marvel, MLB, and more). Prescription and blue-light lenses are made and hand-assembled in California, with frames starting around $80, free shipping and 30-day returns, and a Pair+ membership. The paireyewear.com storefront runs on Shopify and exposes an agent-native commerce surface — a published agents.md and llms.txt, Shopify Customer Accounts OpenID Connect, and a live Universal Commerce Protocol (UCP) MCP endpoint for agent-driven catalog search, cart, and buyer-approved checkout.
 
-Backed by: nea — https://paireyewear.com
+**Areas:** Company · Consumer · Eyewear · E-Commerce · Retail · Shopify · Direct to Consumer · Agentic Commerce · MCP · Universal Commerce Protocol
+
+## Pair Eyewear on APIs.io
+
+Everything profiled for Pair Eyewear is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/pair-eyewear/](https://apis.io/providers/pair-eyewear/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Pair Eyewear Agent Commerce (UCP/MCP)](https://apis.io/apis/pair-eyewear/pair-eyewear-agent-commerce-ucpmcp/) — Shopify-hosted Universal Commerce Protocol shopping service exposed over MCP for agent-driven catalog search, cart, and buyer-approved checkout on the Pair…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [pair-eyewear-ucp](https://apis.io/servers/pair-eyewear/pair-eyewear-ucp/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Pair Eyewear Authentication](https://apis.io/security/pair-eyewear/pair-eyewear-authentication/)
+- [Pair Eyewear Domain Security](https://apis.io/security/pair-eyewear/pair-eyewear-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Pair Eyewear Scopes](https://apis.io/scopes/pair-eyewear/pair-eyewear-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://paireyewear.com)
+- [Documentation](https://paireyewear.com/agents.md)
+- [Sign up](https://paireyewear.com/account/login)
+- [Support](https://paireyewear.com/pages/help-center)
+- [Blog](https://paireyewear.com/blogs/news)
+- [Terms of service](https://paireyewear.com/policies/terms-of-service)
+- [Privacy policy](https://paireyewear.com/policies/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 26.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 34.2 |
+
+**Agent readiness 17.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | platform (partial credit) |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/pair-eyewear/](https://apis.io/providers/pair-eyewear/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Pair Eyewear: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/pair-eyewear/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
